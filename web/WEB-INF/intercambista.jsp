@@ -22,6 +22,7 @@
             <input type="text" name="contato" value="" /><br>
             <label> Quantidade de dias de hospedagem:</label>
             <input type="text" name="dias" value="" /><br>
+            <%--TESTE TENTANDO PEGAR O PARAMETRO PELA URL, TAMBEM NAO FUNCIONOU--%> 
             <a href="adiciona.html">Adiciona</a>
             <input type="submit" value="Enviar" name="enviar" />
             <input type="reset" value="Limpar" name="limpar" />

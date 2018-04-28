@@ -33,10 +33,15 @@ public class MainServlet extends HttpServlet {
             request.setAttribute("pessoas", pessoas);
             RequestDispatcher dispachante = request.getRequestDispatcher("/WEB-INF/intercambista.jsp");
             dispachante.forward(request, response);}
+        
+        /// NAO CONSIGO COMPARAR O PARAMETRO PARA INSERIR A PESSOA
+        //Java.lang.NumberFormatException: null
+        
+        //TENTEI COM IF PEGANDO O PARAMETRO MAS MESMO ASSIM DA ERRO
            else if ("/adiciona.html".equals(request.getServletPath())) {
                 String nome = request.getParameter("nome");
                 String contato = request.getParameter("contato");
-                Integer dias = Integer.parseInt(request.getParameter("dias"));
+                Integer dias = (Integer)Integer.parseInt(request.getParameter("dias"));
                 Pessoa p = new Pessoa(nome, contato, 0, dias, true);
                 pessoas.add(p);
             request.setAttribute("pessoas", pessoas);
